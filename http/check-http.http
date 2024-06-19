@@ -1,0 +1,34 @@
+###
+GET http://localhost:7374/check/
+
+
+###
+POST http://localhost:7374/check/
+Content-Type: application/json
+
+{
+  "userId": "1",
+  "status": "expense",
+  "checkNumber": 358.41,
+  "categoryId": "8",
+  "remark": "玩具",
+  "createTime": "2024-06-18"
+}
+
+###
+POST http://localhost:7374/check/6
+Content-Type: application/json
+
+{
+  "userId": "2",
+  "checkNumber": 150,
+  "createTime": "2024-06-15"
+}
+
+
+###
+DELETE http://localhost:7374/check/10
+
+
+###
+GET http://localhost:7374/check/month?status=expense

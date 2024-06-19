@@ -1,0 +1,9 @@
+###
+GET http://localhost:7374/home/user
+
+
+###
+POST http://localhost:7374/home/user
+Content-Type: application/x-www-form-urlencoded
+
+name=赵四

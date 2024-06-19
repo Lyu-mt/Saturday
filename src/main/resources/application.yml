@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: Saturday
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/db_saturday?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 082901
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+server:
+  port: 7374

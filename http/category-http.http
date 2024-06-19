@@ -1,0 +1,11 @@
+###
+GET http://localhost:7374/category/
+
+###
+POST http://localhost:7374/category/
+Content-Type: application/json
+
+{
+  "categoryName": "医疗",
+  "status": "expense"
+}
