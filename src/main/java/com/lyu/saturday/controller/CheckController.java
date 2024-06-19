@@ -3,7 +3,6 @@ package com.lyu.saturday.controller;
 import com.lyu.saturday.common.Result;
 import com.lyu.saturday.common.ResultMessage;
 import com.lyu.saturday.common.exception.SaturdayServiceException;
-import com.lyu.saturday.entity.Check;
 import com.lyu.saturday.service.CheckService;
 import com.lyu.saturday.vo.CheckVO;
 import com.lyu.saturday.vo.MonthVO;
@@ -13,7 +12,6 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
-import java.util.List;
 
 @RestController
 @RequestMapping("/check")

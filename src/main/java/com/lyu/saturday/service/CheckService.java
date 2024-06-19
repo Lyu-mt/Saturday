@@ -13,7 +13,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.text.ParseException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
@@ -31,7 +30,7 @@ public class CheckService {
 		return new TotalChecksVO(totalChecks, totalChecksCount);
 	}
 
-	public void createCheck(CheckVO checkVO) throws SaturdayServiceException, ParseException {
+	public void createCheck(CheckVO checkVO) throws SaturdayServiceException {
 		Check check = new Check();
 		BeanUtils.copyProperties(checkVO, check);
 		check.setCreateTime(LocalDate.parse(checkVO.getCreateTime()));
@@ -40,7 +39,7 @@ public class CheckService {
 	}
 
 	@Transactional
-	public void editCheck(CheckVO checkVO, long id) throws SaturdayServiceException, ParseException {
+	public void editCheck(CheckVO checkVO, long id) throws SaturdayServiceException {
 		var check = getCheck(id).orElseThrow(() -> new SaturdayServiceException("the check doesn't exist"));
 		IBeanUtils.copyNotNullProperties(checkVO, check);
 		check.setCashNumber(BigDecimal.valueOf(checkVO.getCheckNumber()));
